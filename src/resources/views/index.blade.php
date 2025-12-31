@@ -19,63 +19,66 @@
         </div>
     </header>
     <main>
-        <div class="contact-form__content">
-            <div class="contact-form__heading">
-                <h2>お問い合わせ</h2>
-            </div>
-            <form class="form">
-                <div class="form__group">
-                    <div class="form__group-title">
-                        <span class="form__lavel--item">お名前</span>
-                        <span class="form__lavel--reqired">必須</span>
-                    </div>
-                <div class="form__group-content">
-                    <div class="form__input--text">
-                        <input type="text" name="name" placeholder="テスト太郎" />
-                    </div>
-                    <div class="form__error">
-                    </div>
-                </div>
-           </div>
+     <div class="contact-form__content">
+      <div class="contact-form__heading">
+       <h2>お問い合わせ</h2>
+      </div>
+      <form class="form" action="/contacts/confirm" method="post">
+        @csrf
+        <div class="form__group">
+         <div class="form__group-title">
+          <span class="form__lavel--item">お名前</span>
+          <span class="form__lavel--reqired">必須</span>
+         </div>
+        <div class="form__group-content">
+         <div class="form__input--text">
+          <input type="text" name="name" placeholder="テスト太郎" />
+         </div>
+         <div class="form__error">
         </div>
-                <div class="form__group">
-                    <div class="form__group-title">
-                        <span class="form__lavel--item">メールアドレス</span>
-                        <span class="form__lavel--reqired">必須</span>
-                    </div>
-                <div class="form__group-content">
-                    <div class="form__input--text">
-                        <input type="text" name="email" placeholder="test@example.com" />
-                    </div>
-                    <div class="form__error">
-                    </div>
-                </div>
-           </div>
+       </div>
+      </div>
+      <div class="form__group">
+        <div class="form__group-title">
+          <span class="form__lavel--item">メールアドレス</span>
+          <span class="form__lavel--reqired">必須</span>
         </div>
-                <div class="form__group">
-                    <div class="form__group-title">
-                        <span class="form__lavel--item">電話番号</span>
-                        <span class="form__lavel--reqired">必須</span>
-                    </div>
-                <div class="form__group-content">
-                    <div class="form__input--text">
-                        <input type="text" name="tel" placeholder="09012345678" />
-                    </div>
-                    <div class="form__error">
-                    </div>
-                </div>
-           </div>
+      <div class="form__group-content">
+        <div class="form__input--text">
+          <input type="text" name="email" placeholder="test@example.com" />
         </div>
-                <div class="form__group">
-                    <div class="form__group-title">
-                        <span class="form__lavel--item">お問い合わせ内容</span>
-                    </div>
-                <div class="form__group-content">
-                    <div class="form__input--textarea">
-                        <textarea name="content"  placeholder="資料をいただきたいです"></textarea>
-                    </div>
-            </form>   
-        </div> 
+      <div class="form__error">
+      </div>
+     </div>
+     </div>
+      <div class="form__group">
+        <div class="form__group-title">
+           <span class="form__lavel--item">電話番号</span>
+           <span class="form__lavel--reqired">必須</span>
+        </div>
+        <div class="form__group-content">
+         <div class="form__input--text">
+           <input type="text" name="tel" placeholder="09012345678" />
+         </div>
+        <div class="form__error">
+        </div>
+       </div>
+      </div>
+        <div class="form__group">
+          <div class="form__group-title">
+              <span class="form__lavel--item">お問い合わせ内容</span>
+          </div>
+          <div class="form__group-content">
+          <div class="form__input--textarea">
+            <textarea name="content"  placeholder="資料をいただきたいです"></textarea>
+          </div>
+        </div>
+       </div>
+        <div class="form__button">
+            <button class="form__button-submit" type="submit">送信</button>
+        </div>
+       </form>   
+      </div> 
     </main>
 </body>
 </html>
