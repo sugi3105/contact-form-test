@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="{{ ('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="{{ ('css/confirm.css') }}" />
-</head>
+@extends('layouts.app')
 
-<body>
-<header class="header">
-        <div class="header__inner">
-            <a class="header__logo" href="/">
-                Contact Form
-            </a>
-        </div>
-    </header>
-    <main>
+@section('css')
+
+<link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
+@endsection
+
+@section('content')
+<div class="confirm__content">
+  <div class="confirm__heading">
+    <h2>お問い合わせ内容確認</h2>
+  </div>
         <?php print_r($contact) ?>
-        <form class="form">
+        <form class="form" action="/contacts" method="post">
+            @csrf
             <div class="confirm-table">
                 <table class="confirm-table__inner">
                     <tr class="confirm-table__row">
@@ -53,6 +46,7 @@
            </div>
         </form>
     </div>
+@endsection
 </main>
 
     
